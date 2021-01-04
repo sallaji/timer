@@ -1,0 +1,48 @@
+.timer-background {
+  -fx-fill: #000000;
+  -fx-width: 100%;
+}
+
+
+.timer-control:active .time-text-field{
+  -fx-text-fill: #57bfff;
+}
+
+.timer-control:convertible .time-text-field{
+  -fx-text-fill: #7cff78;
+}
+
+.timer-control:time-over .time-text-field{
+  -fx-text-fill: #ff5342;
+}
+
+.timer-control{
+  -fx-text-fill: #ffffff;
+}
+
+.time-text-field {
+  -fx-background-color: transparent;
+  -fx-text-fill: #ffffff;
+  -fx-padding: 0;
+  -fx-alignment: center;
+}
+
+.time-text-field:focused {
+  -fx-padding: 0;
+  -fx-text-fill: white;
+}
+
+.button-container {
+  -fx-text-fill: #57bfff;
+}
+
+.dropdown-chooser {
+    -fx-background-color:  white;
+    -fx-background-radius: 5;
+    -fx-spacing:       5;
+}
+
+.dropdown-button{
+    -fx-background-color:  white;
+    -fx-background-radius: 5;
+}

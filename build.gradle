@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'ch.fhnw'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java", "src/main/resources"]
+        }
+    }
+}
+
+compileJava {
+    options.encoding    = 'UTF-8'
+    sourceCompatibility = JavaVersion.VERSION_15
+    targetCompatibility = JavaVersion.VERSION_15
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "fr.brouillard.oss:cssfx:11.4.0"
+    implementation 'org.apache.xmlgraphics:fop:2.3'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.7.0')
+
+
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
